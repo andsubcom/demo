@@ -5,7 +5,7 @@ const Plans = () => {
   return (
     <div>
       <p style={{fontSize: '48px'}}>Plans page</p>
-      <Link href='/checkout'>
+      <Link href='/checkout' passHref>
         <button>Checkout</button>
       </Link>
     </div>

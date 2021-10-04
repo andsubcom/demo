@@ -1,20 +1,15 @@
+import { useEthers } from '@usedapp/core'
 import Link from 'next/link'
+import Account from './Account'
 import styles from '../styles/Header.module.css'
 
-const Header = ({ isSignedIn, isPro }) => {
+const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.title}>degens club</div>
-      <div>
-        {!isSignedIn
-          ? <button className={styles.button}>Sign In</button>
-          : (!isPro &&
-              <Link href='/checkout'>
-                <button className={styles.button}>Get Pro</button>
-              </Link>
-          )
-        }
-      </div>
+      <Link href='/' passHref>
+        <div className={styles.title}>degens club</div>
+      </Link>
+      <Account/>
     </div>
   )
 }

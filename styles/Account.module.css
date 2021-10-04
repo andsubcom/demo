@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.network {
+  height: 40px;
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  margin-right: 20px;
+  background-color: #37393f;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.account {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  margin-right: 20px;
+  background-color: #37393f;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.network:hover,
+.network:focus,
+.account:hover,
+.account:focus {
+  background-color: #5d606a;
+}
+
+
+.button {
+  height: 40px;
+  padding: 0px 20px;
+  font-size: 1.1rem;
+}
