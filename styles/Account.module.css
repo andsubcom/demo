@@ -5,16 +5,34 @@
   align-items: center;
 }
 
+.button {
+  height: 40px;
+  padding: 0px 20px;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
 .network {
   height: 40px;
-  flex: 0 0 40px;
   display: flex;
   align-items: center;
+  
   padding: 0px 20px;
-  margin-right: 20px;
-  background-color: #37393f;
+  margin-left: 20px;
   border-radius: 4px;
+  background-color: #37393f;
+  font-weight: normal;
+  
   font-size: 1.1rem;
+  color: #f2342d;
+}
+
+.network:hover,
+.network:focus,
+.network:active {
+  cursor: pointer;
+  background-color: rgb(49, 51, 56);
 }
 
 .account {
@@ -22,24 +40,16 @@
   display: flex;
   align-items: center;
   padding: 0px 20px;
-  margin-right: 20px;
+  margin-left: 20px;
   background-color: #37393f;
   border-radius: 4px;
   font-size: 1.1rem;
+  white-space: nowrap;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.network:hover,
-.network:focus,
 .account:hover,
 .account:focus {
-  background-color: #5d606a;
-}
-
-
-.button {
-  height: 40px;
-  padding: 0px 20px;
-  font-size: 1.1rem;
+  background-color: rgb(49, 51, 56);
 }

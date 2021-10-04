@@ -44,17 +44,25 @@ const ContentLayout = () => {
 
 
 const Home = () => {
-  // const address = '0x66814090cCA5f4cFf0262720DC82F640e6E0663f'
-  // const isSignedIn = false
   const isPro = false
   
-  const { activateBrowserWallet, account } = useEthers()
-  const connect = () => { activateBrowserWallet() }
+  const { activateBrowserWallet, account, chainId } = useEthers()
+  const networkCorrect = chainId === 3
+
   return (
     <>
-      {account
-        ? (isPro ? <ContentLayout/> : <NoAccessLayout address={account}/>) 
-        : <LoginLayout onClick={connect}/>}
+      {!account && 
+        <LoginLayout onClick={() => activateBrowserWallet() }/>
+      }
+      {!networkCorrect && account && 
+        <p>This app only works on Ropsten network</p>
+      }
+      {networkCorrect && account && isPro && 
+        <ContentLayout/> 
+      }
+      {networkCorrect && account && !isPro && 
+        <NoAccessLayout address={account}/>
+      }
     </>
   )
 }
