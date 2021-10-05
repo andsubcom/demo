@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Header from './Header'
-import styles from '../styles/AppContent.module.css'
+import Header from 'components/Header'
+import styles from 'styles/AppContent.module.css'
 
 const AppContent = ({ Component, pageProps }) => {
   return (

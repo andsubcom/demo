@@ -1,6 +1,6 @@
 import { ChainId, DAppProvider } from '@usedapp/core'
-import AppContent from '../components/AppContent'
-import '../styles/globals.css'
+import AppContent from 'components/AppContent'
+import 'styles/globals.css'
 
 
 // web3-react

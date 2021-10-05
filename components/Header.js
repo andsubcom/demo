@@ -1,7 +1,6 @@
-import { useEthers } from '@usedapp/core'
 import Link from 'next/link'
-import Account from './Account'
-import styles from '../styles/Header.module.css'
+import Account from 'components/Account'
+import styles from 'styles/Header.module.css'
 
 const Header = () => {
   return (

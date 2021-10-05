@@ -1,6 +1,6 @@
 import { useEthers } from '@usedapp/core'
 import Link from 'next/link'
-import styles from '../styles/Account.module.css'
+import styles from 'styles/Account.module.css'
 
 // function networkNameById(id) {
 //   switch (id) {

@@ -1,6 +1,6 @@
 import { useContractCall, useEthers } from '@usedapp/core'
 import { Interface } from '@usedapp/core/node_modules/@ethersproject/abi'
-import styles from '../styles/Checkout.module.css'
+import styles from 'styles/Checkout.module.css'
 
 
 const HUB_ADDRESS = '0xF61C6cD6FEa4E407651d94837816aD0f8be350E5'

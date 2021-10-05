@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/Plans.module.css'
+import styles from 'styles/Plans.module.css'
 
 const Plans = () => {
   return (
