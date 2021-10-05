@@ -1,28 +1,16 @@
-import { useContractCall, useEthers } from '@usedapp/core'
-import { Interface } from '@usedapp/core/node_modules/@ethersproject/abi'
+import { useSubscriptionInfo, useIsAccountSubscribed } from 'src/hooks'
 import styles from 'styles/Checkout.module.css'
 
 
-const HUB_ADDRESS = '0xF61C6cD6FEa4E407651d94837816aD0f8be350E5'
-const ABI = [
-  `function checkUserHasActiveSubscription(address user, uint256 subscriptionId) external view returns(bool)`
-]
-
-
-function useIsAccountSubscribed(hubAddress, account, productId) {
-  const [isSubscribed] = useContractCall({
-    abi: new Interface(ABI),
-    address: hubAddress,
-    method: 'checkUserHasActiveSubscription',
-    args: [account, productId]
-  }) ?? []
-  return isSubscribed
-}
-
 const Checkout = () => {
   const account = '0x66814090cCA5f4cFf0262720DC82F640e6E0663f'
-  const isSubscribed = useIsAccountSubscribed(HUB_ADDRESS, account, 0)
-  console.log(`${account} is subscribed = ${isSubscribed}`)
+  const productId = 0
+
+  // const isSubscribed = useIsAccountSubscribed(account, productId)
+  // console.log(`${account} is subscribed = ${isSubscribed}`)
+
+  const info = useSubscriptionInfo(productId)
+  console.log(`useSubscriptionInfo = ${JSON.stringify(info)}`)
 
   return (
     <div>

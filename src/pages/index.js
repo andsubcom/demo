@@ -26,7 +26,7 @@ const NoAccessLayout = ({ address }) => {
         You have no access to the club.
       </p>
       <code className='code'>{address}</code>
-      <Link href='/plans' passHref>
+      <Link href='/checkout' passHref>
         <button style={{ marginTop: '4rem' }}>Become a member</button>
       </Link>
     </div>
