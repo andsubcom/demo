@@ -26,8 +26,8 @@ const NoAccessLayout = ({ address }) => {
         You have no access to the club.
       </p>
       <code className='code'>{address}</code>
-      <Link href='/checkout' passHref>
-        <button style={{ marginTop: '4rem' }}>Become a member</button>
+      <Link href='https://checkout.andsub.com/demo_premium_monthly' passHref>
+        <button style={{ marginTop: '4rem' }}>Get Premium</button>
       </Link>
     </div>
   )
@@ -37,7 +37,7 @@ const ContentLayout = () => {
   return (
     <div className={styles.layoutContainer}>
       <Image src="/success.svg" alt="Vercel Logo" width={160} height={160} style={{ color:'red' }} />
-      <p className={styles.description}>Welcome to the degens club!</p>
+      <p className={styles.description}>Welcome to the club!</p>
     </div>
   )
 }

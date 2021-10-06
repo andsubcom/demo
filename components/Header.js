@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <Link href='/' passHref>
-        <div className={styles.title}>degens club</div>
+        <div className={styles.title}>andsub demo</div>
       </Link>
       <Account/>
     </div>

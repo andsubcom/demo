@@ -38,8 +38,8 @@ const Account = () => {
       {account && <div className={styles.account}>{formatAccount(account)}</div>}
       {!account && <button className={styles.button} onClick={() => { activateBrowserWallet() }}>Sign In</button>}
       {networkCorrect && account && !isPro && 
-        <Link href='/checkout' passHref>
-          <button className={styles.button}>Get Pro</button>
+        <Link href='https://checkout.andsub.com/demo_premium_monthly' passHref>
+          <button className={styles.button}>Get Premium</button>
         </Link>
       }
     </div>
