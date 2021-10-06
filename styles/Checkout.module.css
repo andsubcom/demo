@@ -1,0 +1,161 @@
+.content {
+}
+
+.widget {
+  width: 420px;
+  height: auto;
+  margin-top: -300px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  
+  padding: 15px 20px 0px 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0.9px #6c86ad,0 2px 4px 0 rgba(0,0,0,.07),0 1px 1.5px 0 rgba(0,0,0,.05);
+}
+
+.subscribe {
+  align-self: center;
+
+  color: #6c86ad;
+  font-size: 18px;
+
+  margin-top: 20px;
+}
+
+.product {
+  align-self: center;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 6px;
+}
+
+.logo {
+  align-self: flex-start;
+  width: 24px;
+  height: 24px;
+}
+
+.name {
+  color: white;
+  font-size: 32px;
+
+  padding-left: 10px;
+}
+
+.pricebox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0px 0px;
+}
+
+.price {
+  font-size: 32px;
+}
+
+.period {
+  font-size: 20px;
+  color: #6c86ad;
+  padding-left: 6px;
+}
+
+.accountheader, .networkheader, .coinheader {
+  color: #6c86ad;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.accountbox, .nextworkbox, .coinbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0px 10px 0px 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #6c86ad,0 2px 4px 0 rgba(0,0,0,.07),0 1px 1.5px 0 rgba(0,0,0,.05);
+}
+
+.accountbox, .nextworkbox {
+  height: 46px;
+}
+
+.coinbox {
+  height: 56px;
+}
+
+.accountbox:hover, .nextworkbox:hover, .coinbox:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px white,0 2px 4px 0 rgba(1,1,1,1),0 1px 1.5px 0 rgba(0,0,0,1);
+}
+
+.boxicon {
+  width: 24px;
+  height: 24px;
+}
+
+.account, .networkname, .coincontent {
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.account {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-family: 'Menlo';
+  word-wrap: break-word;
+}
+
+.coincontent {
+  flex-grow: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.networkname, .coinsymbol {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.coinname {
+  color: #6c86ad;
+  font-size: 16px;
+}
+
+.coinbalance {
+  font-size: 18px;
+  padding-right: 5px;
+}
+
+.dropdown {
+  color: white;
+}
+
+.button {
+  height: 46px;
+  margin-top: 45px;
+
+  padding: 0px 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.hint {
+  align-self: center;
+  font-size: 12px;
+  padding: 14px 10px 14px 10px;
+  color: #4e6180;
+  text-align: center;
+}
