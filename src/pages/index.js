@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from 'styles/Home.module.css'
 
+import { useIsSubscribed } from 'src/hooks'
 
 const LoginLayout = ({ onClick }) => {
   return (
@@ -15,7 +16,7 @@ const LoginLayout = ({ onClick }) => {
   )
 }
 
-const NoAccessLayout = ({ address }) => {
+const NoAccessLayout = ({ address, productId }) => {
   return (
     <div className={styles.layoutContainer}>
       <div style={{fontSize: '6rem'}}>🔐</div>
@@ -26,7 +27,7 @@ const NoAccessLayout = ({ address }) => {
         You have no access to the club.
       </p>
       <code className='code'>{address}</code>
-      <Link href='https://checkout.andsub.com/demo_premium_monthly' passHref>
+      <Link href={`https://checkout.andsub.com/${productId}`} passHref>
         <button style={{ marginTop: '4rem' }}>Get Premium</button>
       </Link>
     </div>
@@ -42,12 +43,13 @@ const ContentLayout = () => {
   )
 }
 
+const PRODUCT_ID = 'test_ilya'
 
 const Home = () => {
-  const isPro = false
   
   const { activateBrowserWallet, account, chainId } = useEthers()
   const networkCorrect = chainId === 3
+  const isPro = useIsSubscribed(PRODUCT_ID)
 
   return (
     <>
@@ -58,10 +60,10 @@ const Home = () => {
         <p>This app only works on Ropsten network</p>
       }
       {networkCorrect && account && isPro && 
-        <ContentLayout/> 
+        <ContentLayout /> 
       }
       {networkCorrect && account && !isPro && 
-        <NoAccessLayout address={account}/>
+        <NoAccessLayout address={account} productId={PRODUCT_ID}/>
       }
     </>
   )
