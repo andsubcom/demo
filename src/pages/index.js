@@ -43,7 +43,7 @@ const ContentLayout = () => {
   )
 }
 
-const PRODUCT_ID = 'test_ilya'
+const PRODUCT_ID = process.env.NEXT_PUBLIC_PRODUCT_ID
 
 const Home = () => {
   
