@@ -2,6 +2,8 @@ import { useEthers } from '@usedapp/core'
 import Link from 'next/link'
 import styles from 'styles/Account.module.css'
 
+const PRODUCT_ID = process.env.NEXT_PUBLIC_PRODUCT_ID
+
 // function networkNameById(id) {
 //   switch (id) {
 //     case 1:
@@ -34,13 +36,13 @@ const Account = () => {
 
   return (
     <div className={styles.container}>
-      {!networkCorrect && account  && <div className={styles.network}>{`Swtich to Ropsten`}</div>}
+      {!networkCorrect && account && <div className={styles.network}>{`Swtich to Ropsten`}</div>}
       {account && <div className={styles.account}>{formatAccount(account)}</div>}
       {!account && <button className={styles.button} onClick={() => { activateBrowserWallet() }}>Sign In</button>}
-      {networkCorrect && account && !isPro && 
-        <Link href='https://checkout.andsub.com/demo_premium_monthly' passHref>
+      {networkCorrect && account && !isPro &&
+        <a href={`https://checkout.andsub.com/${PRODUCT_ID}`} target='_blank' rel="noreferrer">
           <button className={styles.button}>Get Premium</button>
-        </Link>
+        </a>
       }
     </div>
   )

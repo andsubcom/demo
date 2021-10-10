@@ -9,7 +9,7 @@ const LoginLayout = ({ onClick }) => {
   return (
     <div className={styles.layoutContainer}>
       <p className={styles.description}>
-        Please sign in with your Ethereum wallet.
+        Please sign in with your Ethereum wallet
       </p>
       <button onClick={onClick}>Sign In</button>
     </div>
@@ -24,12 +24,12 @@ const NoAccessLayout = ({ address, productId }) => {
         className={styles.description} 
         style={{ marginTop: '1rem', marginBottom: '0.5rem' }}
       >
-        You have no access to the club.
+        You have no premium access
       </p>
       <code className='code'>{address}</code>
-      <Link href={`https://checkout.andsub.com/${productId}`} passHref>
-        <button style={{ marginTop: '4rem' }}>Get Premium</button>
-      </Link>
+      <a href={`https://checkout.andsub.com/${PRODUCT_ID}`} target='_blank' rel="noreferrer">
+          <button className={styles.button} style={{ marginTop: '4rem' }}>Get Premium</button>
+        </a>
     </div>
   )
 }
